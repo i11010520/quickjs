@@ -1,0 +1,6 @@
+.obj/
+*.exe
+*.a
+
+repl.c
+qjscalc.c

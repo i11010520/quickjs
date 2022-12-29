@@ -26,7 +26,7 @@ ifeq ($(shell uname -s),Darwin)
 CONFIG_DARWIN=y
 endif
 # Windows cross compilation from Linux
-#CONFIG_WIN32=y
+CONFIG_WIN32=y
 # use link time optimization (smaller and faster executables but slower build)
 CONFIG_LTO=y
 # consider warnings as errors (for development)
@@ -175,7 +175,7 @@ QJS_OBJS+=$(OBJDIR)/qjscalc.o
 endif
 
 HOST_LIBS=-lm -ldl -lpthread
-LIBS=-lm
+LIBS=-lm -lpthread
 ifndef CONFIG_WIN32
 LIBS+=-ldl -lpthread
 endif
